@@ -14,7 +14,10 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
 
-    <!-- InviteGuests Fragment-->
+    <!-- Hamburger menu-->
+    <string name="menu_invite">Invite</string>
 
+    <!-- InviteGuests Fragment-->
+    <string name="inv_header_text">Invite your guest via email</string>
     <string name="invite_hint">Type the email of the invitee</string>
 </resources>

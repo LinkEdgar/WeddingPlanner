@@ -19,6 +19,6 @@ class InviteGuestsFragment : Fragment(){
         //TODO find out why the following method has been deprecated and find its alternative
         viewModel = ViewModelProviders.of(this).get(InviteGuestsFragmentViewModel::class.java)
 
-        return super.onCreateView(inflater, container, savedInstanceState)
+        return view
     }
 }
