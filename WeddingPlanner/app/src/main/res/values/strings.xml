@@ -18,6 +18,6 @@
     <string name="menu_invite">Invite</string>
 
     <!-- InviteGuests Fragment-->
-    <string name="inv_header_text">Invite your guest via email</string>
+    <string name="inv_header_text">Send an invitation to your special day here</string>
     <string name="invite_hint">Type the email of the invitee</string>
 </resources>
