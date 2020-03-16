@@ -9,10 +9,12 @@
             android:id="@+id/invite_guest"
             android:icon="@drawable/ic_menu_send"
             android:title="@string/menu_invite" />
+
+        <!-- change icon -->
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_wed_detail"
             android:icon="@drawable/ic_menu_gallery"
-            android:title="@string/menu_gallery" />
+            android:title="@string/menu_form" />
         <item
             android:id="@+id/nav_slideshow"
             android:icon="@drawable/ic_menu_slideshow"
