@@ -1,8 +1,11 @@
 package com.example.weddingplanner.ui.home
 
+import android.view.View
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
+import androidx.navigation.Navigation
+import com.example.weddingplanner.R
 import com.example.weddingplanner.Repositories.HomeRepository
 
 class HomeViewModel : ViewModel() {
@@ -20,6 +23,10 @@ class HomeViewModel : ViewModel() {
 
     fun sendInvite(number: String ){
         homeRepo.setInvite(number)
+    }
+
+    fun switchToInviteFragment(view: View){
+        Navigation.findNavController(view).navigate(R.id.invite_guest)
     }
 
 

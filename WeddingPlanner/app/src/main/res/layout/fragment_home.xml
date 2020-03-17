@@ -47,16 +47,41 @@
             android:layout_height="match_parent">
 
 
-            <EditText
-                android:textAlignment="center"
-                android:hint="type some number here"
-                android:id="@+id/input_text"
+            <TextView
+                android:id="@+id/textView2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
+                android:text="@string/card_header"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toTopOf="@+id/view4"
+                app:layout_constraintEnd_toStartOf="@+id/guideline18"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="@+id/guideline17"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <View
+                android:id="@+id/view4"
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:background="@color/divder_color"
+                app:layout_constraintBottom_toTopOf="@+id/sub_header"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView2" />
+
+            <TextView
+                android:id="@+id/sub_header"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="@string/card_subheader"
+                android:textAlignment="center"
                 app:layout_constraintBottom_toTopOf="@+id/no_tv"
                 app:layout_constraintEnd_toStartOf="@+id/guideline18"
+                app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toBottomOf="@+id/view4" />
 
             <TextView
                 android:id="@+id/yes_tv"
@@ -64,11 +89,10 @@
                 android:layout_height="wrap_content"
                 android:text="@string/home_status_yes"
                 android:textAlignment="center"
-                app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/no_tv"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/no_tv"
                 app:layout_constraintWidth_percent=".3"
                 tools:text="Yes" />
 
@@ -94,10 +118,11 @@
                 android:layout_height="wrap_content"
                 android:text="@string/home_status_no"
                 android:textAlignment="center"
+                app:layout_constraintBottom_toTopOf="@+id/email_tv"
                 app:layout_constraintEnd_toStartOf="@+id/maybe_tv"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/yes_tv"
-                app:layout_constraintTop_toTopOf="@+id/yes_tv"
+                app:layout_constraintTop_toBottomOf="@+id/sub_header"
                 app:layout_constraintWidth_percent=".3"
                 tools:text="No" />
 
@@ -147,29 +172,50 @@
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:id="@+id/send_bt"
-                android:text="Test Button"
-                android:layout_width="0dp"
+            <TextView
+                android:id="@+id/email_tv"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_margin="6dp"
+                android:singleLine="true"
+                android:text="Send more invites?"
+                android:textAlignment="center"
+                android:textSize="16sp"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/guideline18"
-                app:layout_constraintStart_toStartOf="@+id/guideline17"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
+                app:layout_constraintEnd_toStartOf="@+id/send_bt"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/no_tv"
+                tools:text="Send more invites" />
+
+            <ImageButton
+                android:id="@+id/send_bt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:src="@drawable/ic_menu_send"
+                android:text="Test Button"
+                app:layout_constraintBottom_toBottomOf="@+id/email_tv"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toEndOf="@+id/email_tv"
+                app:layout_constraintTop_toTopOf="@+id/email_tv"
+                app:layout_constraintVertical_bias="1.0" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline17"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_begin="8dp" />
+                app:layout_constraintGuide_begin="16dp" />
 
             <androidx.constraintlayout.widget.Guideline
                 android:id="@+id/guideline18"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:orientation="vertical"
-                app:layout_constraintGuide_end="8dp" />
+                app:layout_constraintGuide_end="16dp" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 

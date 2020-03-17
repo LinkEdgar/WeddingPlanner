@@ -18,6 +18,8 @@
     <string name="menu_send">Send</string>
 
     <!-- Home Fragment-->
+    <string name="card_subheader">Guest responses:</string>
+    <string name="card_header">Here is some important information about your wedding</string>
     <string name="home_header">Your special day is coming. Here is some important shit for ya</string>
     <string name="home_status_yes">Yes</string>
     <string name="home_status_no">No</string>
