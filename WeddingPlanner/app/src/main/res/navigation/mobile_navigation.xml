@@ -45,4 +45,9 @@
         android:name="com.example.weddingplanner.ui.InviteGuestsFragment"
         android:label="InviteGuests"
         tools:layout="@layout/fragment_invite_guests" />
+    <fragment
+        tools:layout="@layout/fragment_login"
+        android:id="@+id/loginFragment"
+        android:name="com.example.weddingplanner.Fragments.LoginFragment"
+        android:label="LoginFragment" />
 </navigation>

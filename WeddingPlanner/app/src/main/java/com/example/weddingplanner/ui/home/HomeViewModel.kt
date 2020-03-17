@@ -5,6 +5,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.navigation.Navigation
+import androidx.navigation.findNavController
 import com.example.weddingplanner.R
 import com.example.weddingplanner.Repositories.HomeRepository
 
@@ -26,7 +27,11 @@ class HomeViewModel : ViewModel() {
     }
 
     fun switchToInviteFragment(view: View){
-        Navigation.findNavController(view).navigate(R.id.invite_guest)
+        Navigation.findNavController(view).navigate(R.id.loginFragment)
+    }
+
+    fun switchToLogin(view: View){
+       // Navigation.findNavController(view).navigate(R.id.loginFraqgment)
     }
 
 
