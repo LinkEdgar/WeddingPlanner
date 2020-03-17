@@ -24,4 +24,9 @@
 
     </style>
 
+    <style name="header_text">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
 </resources>

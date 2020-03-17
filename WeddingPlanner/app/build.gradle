@@ -8,7 +8,7 @@ android {
     compileSdkVersion 28
     defaultConfig {
         applicationId "com.example.weddingplanner"
-        minSdkVersion 15
+        minSdkVersion 16
         targetSdkVersion 28
         versionCode 1
         versionName "1.0"
@@ -26,6 +26,7 @@ android {
 }
 
 dependencies {
+    implementation 'com.google.firebase:firebase-database-ktx:19.2.1'
     implementation 'com.google.firebase:firebase-database:19.2.1'
     implementation 'com.google.firebase:firebase-analytics:17.2.3'
     implementation fileTree(dir: 'libs', include: ['*.jar'])

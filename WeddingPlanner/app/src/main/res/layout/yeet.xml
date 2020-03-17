@@ -30,39 +30,26 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <androidx.cardview.widget.CardView
+        android:elevation="6dp"
         android:id="@+id/card_view"
         android:layout_width="0dp"
+        app:layout_constraintHeight_percent=".5"
         android:layout_height="0dp"
-        android:elevation="6dp"
-        app:cardCornerRadius="3dp"
-        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginTop="60dp"
         app:layout_constraintEnd_toStartOf="@+id/guideline15"
-        app:layout_constraintHeight_percent=".6"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="@+id/guideline14"
-        app:layout_constraintTop_toTopOf="@+id/header_tv">
+        app:layout_constraintTop_toBottomOf="@+id/header_tv">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
-
-            <EditText
-                android:textAlignment="center"
-                android:hint="type some number here"
-                android:id="@+id/input_text"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toTopOf="@+id/no_tv"
-                app:layout_constraintEnd_toStartOf="@+id/guideline18"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
             <TextView
+                android:text="@string/home_status_yes"
                 android:id="@+id/yes_tv"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="@string/home_status_yes"
                 android:textAlignment="center"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/no_tv"
@@ -80,29 +67,27 @@
                 app:layout_constraintTop_toBottomOf="@+id/yes_tv">
 
                 <TextView
-                    android:id="@+id/yes_display"
+                    android:textAlignment="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="100"
-                    android:textAlignment="center" />
+                    android:text="100" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/no_tv"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:text="@string/home_status_no"
                 android:textAlignment="center"
+                android:id="@+id/no_tv"
+                app:layout_constraintWidth_percent=".3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintEnd_toStartOf="@+id/maybe_tv"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/yes_tv"
                 app:layout_constraintTop_toTopOf="@+id/yes_tv"
-                app:layout_constraintWidth_percent=".3"
                 tools:text="No" />
 
             <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/textInputLayout2"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="@+id/no_tv"
@@ -110,25 +95,24 @@
                 app:layout_constraintTop_toBottomOf="@+id/no_tv">
 
                 <TextView
-                    android:id="@+id/no_display"
+                    android:textAlignment="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="3"
-                    android:textAlignment="center" />
+                    android:text="3" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
             <TextView
-                android:id="@+id/maybe_tv"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
                 android:text="@string/home_status_maybe"
                 android:textAlignment="center"
+                android:id="@+id/maybe_tv"
+                app:layout_constraintWidth_percent=".3"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.5"
                 app:layout_constraintStart_toEndOf="@+id/no_tv"
                 app:layout_constraintTop_toTopOf="@+id/no_tv"
-                app:layout_constraintWidth_percent=".3"
                 tools:text="Maybe" />
 
             <com.google.android.material.textfield.TextInputLayout
@@ -139,40 +123,14 @@
                 app:layout_constraintTop_toBottomOf="@+id/maybe_tv">
 
                 <TextView
-                    android:id="@+id/maybe_display"
+                    android:textAlignment="center"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:text="24"
-                    android:textAlignment="center" />
+                    android:text="24" />
 
             </com.google.android.material.textfield.TextInputLayout>
 
-            <Button
-                android:id="@+id/send_bt"
-                android:text="Test Button"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/guideline18"
-                app:layout_constraintStart_toStartOf="@+id/guideline17"
-                app:layout_constraintTop_toBottomOf="@+id/textInputLayout2" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_begin="8dp" />
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/guideline18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintGuide_end="8dp" />
-
         </androidx.constraintlayout.widget.ConstraintLayout>
-
 
     </androidx.cardview.widget.CardView>
 

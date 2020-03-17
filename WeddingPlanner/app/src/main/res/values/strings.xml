@@ -17,6 +17,13 @@
     <string name="menu_share">Share</string>
     <string name="menu_send">Send</string>
 
+    <!-- Home Fragment-->
+    <string name="home_header">Your special day is coming. Here is some important shit for ya</string>
+    <string name="home_status_yes">Yes</string>
+    <string name="home_status_no">No</string>
+    <string name="home_status_maybe">Maybe</string>
+
+
     <!-- InviteGuests Fragment-->
     <string name="inv_header_text">Send an invitation to your special day here</string>
     <string name="invite_hint">Type the email of the invitee</string>
