@@ -1,4 +1,4 @@
-package com.example.weddingplanner
+package com.example.weddingplanner.ViewModels
 
 import androidx.lifecycle.ViewModel
 
