@@ -42,6 +42,10 @@
     <string name="create_sign_in_button">Sign In</string>
 
 
+    <!--Forgot Password -->
+    <string name="forgot_header_text">Please enter the email associated with your account.</string>
+    <string name="forgot_send_email_bt">Reset Password</string>
+
 
     <!-- InviteGuests Fragment-->
     <string name="inv_header_text">Send an invitation to your special day here</string>

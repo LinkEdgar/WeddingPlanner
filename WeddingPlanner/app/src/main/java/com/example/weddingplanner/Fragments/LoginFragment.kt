@@ -26,5 +26,6 @@ class LoginFragment : Fragment(){
 
     private fun setViews(){
         binding!!.createAccount.setOnClickListener{viewModel.switchToCreateAccount(view!!)}
+        binding!!.forgotPasswrod.setOnClickListener{viewModel.switchToForgotPassword(view!!)}
     }
 }

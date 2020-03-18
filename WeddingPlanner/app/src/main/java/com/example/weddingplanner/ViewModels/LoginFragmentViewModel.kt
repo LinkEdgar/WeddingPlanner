@@ -10,4 +10,8 @@ class LoginFragmentViewModel : ViewModel(){
     fun switchToCreateAccount(view: View){
         view.findNavController().navigate(R.id.createAccountFragment)
     }
+
+    fun switchToForgotPassword(view: View){
+        view.findNavController().navigate(R.id.forgotPasswordFragment)
+    }
 }

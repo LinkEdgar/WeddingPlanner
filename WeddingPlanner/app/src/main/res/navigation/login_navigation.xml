@@ -15,5 +15,10 @@
         android:name="com.example.weddingplanner.Fragments.CreateAccountFragment"
         android:label="CreateAccountFragment"
         tools:layout="@layout/fragment_create_account"/>
+    <fragment
+        tools:layout="@layout/fragment_forgot_password"
+        android:id="@+id/forgotPasswordFragment"
+        android:name="com.example.weddingplanner.Fragments.ForgotPasswordFragment"
+        android:label="ForgotPasswordFragment" />
 
 </navigation>

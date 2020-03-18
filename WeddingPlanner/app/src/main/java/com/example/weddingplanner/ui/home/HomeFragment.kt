@@ -25,10 +25,7 @@ class HomeFragment : Fragment() {
         setViews(root)
 
         getInviteInfo()
-
-        //TODO remove this test code
-        val intent = Intent(context, LoginActvitiy::class.java)
-        startActivity(intent)
+        
 
         return root
     }
