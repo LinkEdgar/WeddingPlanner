@@ -24,12 +24,6 @@ class HomeFragment : Fragment() {
 
         getInviteInfo()
 
-        if(true) {
-            viewModel.switchToLogin(root)
-
-        }
-
-
         return root
     }
 

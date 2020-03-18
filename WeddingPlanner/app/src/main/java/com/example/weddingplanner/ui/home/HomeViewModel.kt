@@ -27,12 +27,7 @@ class HomeViewModel : ViewModel() {
     }
 
     fun switchToInviteFragment(view: View){
-        Navigation.findNavController(view).navigate(R.id.loginFragment)
+        Navigation.findNavController(view).navigate(R.id.invite_guest)
     }
-
-    fun switchToLogin(view: View){
-       // Navigation.findNavController(view).navigate(R.id.loginFraqgment)
-    }
-
 
 }
