@@ -1,15 +1,21 @@
 package com.example.weddingplanner.ViewModels
 
+import android.app.Activity
 import android.view.View
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.navigation.findNavController
 import com.example.weddingplanner.Models.Account
 import com.example.weddingplanner.R
+import com.example.weddingplanner.Repositories.OnboardingRepository
+import com.example.weddingplanner.Resource
+import com.google.firebase.auth.FirebaseUser
 
 class CreateAccountFragmentViewModel : ViewModel(){
 
     private var isAccountValid = MutableLiveData<Boolean>()
+
+    private var onboardingRepo = OnboardingRepository()
 
     var account = Account("","","","")
 
@@ -24,27 +30,30 @@ class CreateAccountFragmentViewModel : ViewModel(){
         return isAccountValid
     }
 
+    fun registerAccount(activity: Activity):MutableLiveData<Resource<FirebaseUser?>>{
+        return onboardingRepo.registerUser(account.email, account.password, activity)
+    }
+
     fun switchToSignIn(view: View){
         view.findNavController().navigate(R.id.loginFragment)
     }
 
-    private fun isEmailValid(email: String):Boolean {
-        //todo validate the email
+    fun isEmailValid(email: String):Boolean {
+        if(email.isEmpty() || !email.contains("@") || !email.contains('.')){
+            return false
+        }
         return true
     }
 
-    private fun isNameValid(name: String):Boolean{
-        //todo validate name
-        return true
+    fun isNameValid(name: String):Boolean{
+        return name.isNotEmpty() && name.length > 1
     }
 
-    private fun isPasswordValid(password: String):Boolean{
-        //todo validate password
-        return true
+    fun isPasswordValid(password: String):Boolean{
+        return password.isNotEmpty() && password.length > 6 //firebase min length
     }
 
-    private fun doPasswordsMatch(password: String, confirmedPass: String):Boolean{
-        //todo validate password match
-        return true
+    fun doPasswordsMatch(password: String, confirmedPass: String):Boolean{
+        return password == confirmedPass
     }
 }

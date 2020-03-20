@@ -9,9 +9,9 @@ import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProviders
 import com.example.weddingplanner.Models.Account
 import com.example.weddingplanner.R
+import com.example.weddingplanner.Resource
 import com.example.weddingplanner.ViewModels.CreateAccountFragmentViewModel
 import com.example.weddingplanner.databinding.FragmentCreateAccountBinding
 
@@ -33,7 +33,7 @@ class CreateAccountFragment : Fragment(){
         binding!!.signInBt.setOnClickListener{ viewModel.switchToSignIn(view!!) }
     }
 
-    private fun updateAccounttInfo(){
+    private fun updateAccountInfo(){
             val name = binding!!.nameEt.text.toString().trim()
             val email = binding!!.emailEt.text.toString().trim()
             val password = binding!!.passwordEt.text.toString().trim()
@@ -42,17 +42,30 @@ class CreateAccountFragment : Fragment(){
     }
 
     private fun onRegisterClicked(){
-        updateAccounttInfo()
+        updateAccountInfo()
         viewModel.isAccountValid().observe(viewLifecycleOwner, Observer { isValid ->
             if(isValid){
-                //todo progress bar
-                //TODO register with firebase then display toast then swtich to login fragment
-                Toast.makeText(context, "Register clicked", Toast.LENGTH_LONG).show()
+                registerAccount()
+            }else{
+                Toast.makeText(context, "Please check your account information", Toast.LENGTH_LONG).show()
             }
         })
     }
 
     private fun registerAccount(){
-        //todo viewModel.registerAccount().observe()
+        viewModel.registerAccount(activity!!).observe(viewLifecycleOwner, Observer { response ->
+            when(response.status){
+                Resource.Status.ERROR -> {
+                    binding!!.progress.visibility = View.GONE
+                    Toast.makeText(context, "Sorry we were not able to register your account", Toast.LENGTH_LONG).show()
+                }
+                Resource.Status.SUCCESS -> {
+                    binding!!.progress.visibility = View.GONE
+                    viewModel.switchToSignIn(view!!)
+                    Toast.makeText(context, "Register successfully", Toast.LENGTH_LONG).show()
+                }
+                Resource.Status.LOADING -> { binding!!.progress.visibility = View.VISIBLE}
+            }
+        })
     }
 }
