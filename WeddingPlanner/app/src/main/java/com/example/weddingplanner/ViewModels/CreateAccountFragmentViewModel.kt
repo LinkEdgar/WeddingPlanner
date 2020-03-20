@@ -9,6 +9,7 @@ import com.example.weddingplanner.Models.Account
 import com.example.weddingplanner.R
 import com.example.weddingplanner.Repositories.OnboardingRepository
 import com.example.weddingplanner.Resource
+import com.example.weddingplanner.Utils.Util
 import com.google.firebase.auth.FirebaseUser
 
 class CreateAccountFragmentViewModel : ViewModel(){
@@ -39,21 +40,18 @@ class CreateAccountFragmentViewModel : ViewModel(){
     }
 
     fun isEmailValid(email: String):Boolean {
-        if(email.isEmpty() || !email.contains("@") || !email.contains('.')){
-            return false
-        }
-        return true
+        return Util.isEmailValid(email)
     }
 
     fun isNameValid(name: String):Boolean{
-        return name.isNotEmpty() && name.length > 1
+        return Util.isNameValid(name)
     }
 
     fun isPasswordValid(password: String):Boolean{
-        return password.isNotEmpty() && password.length > 6 //firebase min length
+        return Util.isPasswordValid(password)
     }
 
     fun doPasswordsMatch(password: String, confirmedPass: String):Boolean{
-        return password == confirmedPass
+        return Util.doPasswordsMatch(password, confirmedPass)
     }
 }
