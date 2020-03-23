@@ -55,7 +55,7 @@
             android:id="@+id/password_layout"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            app:layout_constraintBottom_toTopOf="@+id/forgot_passwrod"
+            app:layout_constraintBottom_toTopOf="@+id/forgot_password"
             app:layout_constraintEnd_toStartOf="@+id/guideline22"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toEndOf="@+id/password_icon"
@@ -71,7 +71,7 @@
 
 
         <TextView
-            android:id="@+id/forgot_passwrod"
+            android:id="@+id/forgot_password"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/forgot_password"
@@ -93,7 +93,7 @@
             app:layout_constraintEnd_toStartOf="@+id/guideline22"
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/guideline21"
-            app:layout_constraintTop_toBottomOf="@+id/forgot_passwrod" />
+            app:layout_constraintTop_toBottomOf="@+id/forgot_password" />
 
         <Button
             android:foreground="?android:attr/selectableItemBackground"
@@ -108,6 +108,17 @@
             app:layout_constraintHorizontal_bias="0.5"
             app:layout_constraintStart_toStartOf="@+id/guideline21"
             app:layout_constraintTop_toBottomOf="@+id/sign_in_bt" />
+
+        <ProgressBar
+            android:visibility="gone"
+            android:id="@+id/progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/guideline21"

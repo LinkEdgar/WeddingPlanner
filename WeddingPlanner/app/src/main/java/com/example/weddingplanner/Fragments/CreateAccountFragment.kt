@@ -47,7 +47,7 @@ class CreateAccountFragment : Fragment(){
             if(isValid){
                 registerAccount()
             }else{
-                Toast.makeText(context, "Please check your account information", Toast.LENGTH_LONG).show()
+                Toast.makeText(context, R.string.create_fail_credentials, Toast.LENGTH_LONG).show()
             }
         })
     }
@@ -57,12 +57,12 @@ class CreateAccountFragment : Fragment(){
             when(response.status){
                 Resource.Status.ERROR -> {
                     binding!!.progress.visibility = View.GONE
-                    Toast.makeText(context, "Sorry we were not able to register your account", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, R.string.create_fail_network, Toast.LENGTH_LONG).show()
                 }
                 Resource.Status.SUCCESS -> {
                     binding!!.progress.visibility = View.GONE
                     viewModel.switchToSignIn(view!!)
-                    Toast.makeText(context, "Register successfully", Toast.LENGTH_LONG).show()
+                    Toast.makeText(context, R.string.create_success, Toast.LENGTH_LONG).show()
                 }
                 Resource.Status.LOADING -> { binding!!.progress.visibility = View.VISIBLE}
             }

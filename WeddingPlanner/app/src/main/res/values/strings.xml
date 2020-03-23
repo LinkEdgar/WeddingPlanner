@@ -26,6 +26,7 @@
     <string name="home_status_maybe">Maybe</string>
 
     <!--Login fragment -->
+    <string name="unsuccessful_signin">Please check your email or password carefully</string>
     <string name="password_hint">Password</string>
     <string name="email_hint">Email</string>
     <string name="forgot_password">Forgot your password?</string>
@@ -33,6 +34,9 @@
     <string name="create_account_bt">Create account</string>
 
     <!-- Create Account Fragment -->
+    <string name="create_fail_credentials">Please check your account information</string>
+    <string name="create_fail_network">Sorry we were not able to register your account</string>
+    <string name="create_success">Registered successfully</string>
     <string name="create_name_hint">Name</string>
     <string name="create_email_hint">Email</string>
     <string name="create_password_hint">Password</string>

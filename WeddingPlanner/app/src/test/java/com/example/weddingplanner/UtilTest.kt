@@ -8,7 +8,7 @@ import org.junit.Before
 import org.junit.Test
 
 class UtilTest {
-    
+
     @Test
     fun testEmailGenericEmail(){
         assertTrue(Util.isEmailValid("email@test.com"))
