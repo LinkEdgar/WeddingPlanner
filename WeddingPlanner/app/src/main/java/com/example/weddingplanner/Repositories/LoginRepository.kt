@@ -45,6 +45,10 @@ class LoginRepository{
         return loginUser
     }
 
+    fun getUserLoginStatus(): FirebaseUser?{
+        return auth.currentUser
+    }
+
     companion object{
         val TAG = "OnboardingRepository"
     }

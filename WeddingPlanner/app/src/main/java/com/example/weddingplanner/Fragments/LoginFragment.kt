@@ -40,7 +40,7 @@ class LoginFragment : Fragment(){
             if(isValid){
                 login()
             }else{
-               Toast.makeText(context!!, R.string.unsuccessful_signin, Toast.LENGTH_LONG)
+               Toast.makeText(context!!, R.string.unsuccessful_signin, Toast.LENGTH_LONG).show()
             }
         })
     }
